@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด | Body Scent</title>
+  <meta name="description" content="น้ำหอมฉีดตัวและโรลออน Body Scent เลือกกรองตามอารมณ์ Fresh, Sweet, Confident และ Romance">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" aria-current="page">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <h1 class="title-rule">สินค้าทั้งหมด</h1>
+          <p class="lead">น้ำหอมฉีดตัวและโรลออน เลือกกรองตามอารมณ์ที่คุณต้องการ</p>
+        </div>
+
+        <div id="filter-bar" class="filter"></div>
+        <div id="product-list" class="product-grid"></div>
+        <noscript><p class="text-center">กรุณาเปิดใช้งาน JavaScript เพื่อดูรายการสินค้า</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <h4>Body Scent</h4>
+        <p>กลิ่นหอมที่เข้าใจทุกอารมณ์ของคุณ</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้าทั้งหมด</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>เลือกตามอารมณ์</h4>
+        <ul>
+          <li><a href="product.html?mood=fresh">Fresh</a></li>
+          <li><a href="product.html?mood=sweet">Sweet</a></li>
+          <li><a href="product.html?mood=confident">Confident</a></li>
+          <li><a href="product.html?mood=romance">Romance</a></li>
+        </ul>
+      </div>
+      <p class="footer-note">© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

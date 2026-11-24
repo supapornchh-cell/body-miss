@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-head {
+      padding: var(--space-6) 0 var(--space-5);
+      background: linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
+    }
+    .page-head h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.4;
+    }
+    .page-head p {
+      margin-bottom: 0;
+    }
+    .order-section {
+      padding: var(--space-5) 0 var(--space-7);
+    }
+    .order-form {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: var(--space-4) var(--space-4) var(--space-4);
+      background: var(--white);
+      border: 1px solid var(--line-soft);
+    }
+    .field {
+      margin-bottom: var(--space-3);
+    }
+    .field label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .field label .req {
+      color: var(--bronze-deep);
+    }
+    .field textarea {
+      resize: vertical;
+      min-height: 5rem;
+    }
+    .field input:focus,
+    .field textarea:focus {
+      outline: none;
+      border-bottom-color: var(--bronze-deep);
+    }
+    .field input:disabled,
+    .field textarea:disabled {
+      opacity: 0.6;
+    }
+    .order-form .btn {
+      margin-top: var(--space-2);
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .btn:disabled:hover {
+      background: transparent;
+      color: var(--ink);
+    }
+    .btn--solid:disabled:hover {
+      background: var(--ink);
+      color: var(--ivory);
+    }
+    .form-hint {
+      margin: var(--space-3) 0 0;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 40rem) {
+      .order-form {
+        padding: var(--space-3) var(--space-2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head text-center">
+      <div class="container">
+        <h1 class="title-rule">สั่งซื้อสินค้า</h1>
+        <p>กรอกข้อมูลด้านล่าง เราจะติดต่อกลับเพื่อยืนยันคำสั่งซื้อและแจ้งวิธีชำระเงิน</p>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container">
+        <form id="orderForm" class="order-form" novalidate>
+          <div class="field">
+            <label for="customerName">ชื่อลูกค้า <span class="req">*</span></label>
+            <input type="text" id="customerName" name="customerName" autocomplete="name" placeholder="ชื่อ-นามสกุล" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">เบอร์โทร / Line <span class="req">*</span></label>
+            <input type="text" id="contact" name="contact" autocomplete="tel" placeholder="เบอร์โทรศัพท์ หรือ Line ID" required>
+          </div>
+
+          <div class="field">
+            <label for="items">รายการสินค้า <span class="req">*</span></label>
+            <input type="text" id="items" name="items" placeholder="เช่น Body Scent Body Spray – Fresh 30ml" required>
+          </div>
+
+          <div class="field">
+            <label for="total">จำนวนเงินรวม (บาท) <span class="req">*</span></label>
+            <input type="text" id="total" name="total" inputmode="numeric" placeholder="เช่น 89" required>
+          </div>
+
+          <div class="field">
+            <label for="note">หมายเหตุ</label>
+            <textarea id="note" name="note" rows="3" placeholder="ที่อยู่จัดส่ง หรือข้อความเพิ่มเติม (ถ้ามี)"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--solid btn--block">ยืนยันสั่งซื้อ</button>
+          <p class="form-hint">ช่องที่มี * จำเป็นต้องกรอก</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <h4>Body Scent</h4>
+        <p>กลิ่นหอมที่เข้าใจทุกอารมณ์ของคุณ น้ำหอมฉีดตัวและโรลออนระงับกลิ่นกาย</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้าทั้งหมด</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>เลือกตามมู้ด</h4>
+        <ul>
+          <li><a href="product.html?mood=fresh">Fresh</a></li>
+          <li><a href="product.html?mood=sweet">Sweet</a></li>
+          <li><a href="product.html?mood=confident">Confident</a></li>
+          <li><a href="product.html?mood=romance">Romance</a></li>
+        </ul>
+      </div>
+      <p class="footer-note mb-0">&copy; Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
